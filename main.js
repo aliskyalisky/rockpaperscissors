@@ -17,7 +17,7 @@ function botPlay() {
 
 function playRound (playerSelection, botSelection) {
     botSelection = botPlay()
-    playerSelection = prompt(`Choose rock, paper or scissors. `);
+    playerSelection = prompt(`Choose rock, paper or scissors. `).toLowerCase();
 
         if (playerSelection == 'rock' && botSelection == 'scissors' || playerSelection == 'paper' && botSelection == 'rock' || playerSelection == 'scissors' && botSelection == 'paper') {
             playerScore = ++playerScore;
@@ -39,5 +39,7 @@ function playRound (playerSelection, botSelection) {
             alert('an error occured, please refresh the page.')
         }
     }
-
+    
+    alert('Let\'s play a game of Rock paper scissors. First to 5 wins.')
+    
     playRound (playerSelection, botSelection)
