@@ -3,10 +3,14 @@
 * {
     font-family: 'Be Vietnam Pro', sans-serif; 
     color: #fff;
+    max-width: 100vw;
+    max-height: 100vh;
 }
 
 html {
-    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -19,13 +23,20 @@ body {
     height: 100vh;
     background: #2b2927;
     z-index: -2;
+    margin: 0;
+    padding: 0;
 }
 
 #myVideo {
-    position: fixed;
+    position: absolute;
     z-index: -1;
     opacity: 0;
     transition: 1s;
+    object-fit: cover;
+    top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #myVideo.victory {
@@ -52,7 +63,7 @@ body {
 .score {
     display: flex;
     margin-bottom: 50px;
-    z-index: 500;
+    z-index: 5;
 }
 
 .scoreyou,
@@ -82,12 +93,15 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    
+    z-index: 20;
 }
 
 .buttons button {
     border: none;
     background: transparent;
+    animation-name: scale;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
 }
 
 
@@ -122,6 +136,31 @@ img {
 img:hover {
     transform: scale(1.1);
     filter: grayscale(0%);
+}
+
+div.flash {
+    z-index: 10;
+    display: inline-block;
+    position: absolute;
+    background-color: #2b2927;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    animation-name: flash;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    opacity: 0;
+}
+
+@keyframes flash {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes scale {
+    0% {transform: scale(10);}
+    100% {transform: scale(1);}
 }
 
 @media only screen and (max-width: 600px) {
