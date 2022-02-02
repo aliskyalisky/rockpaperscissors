@@ -6,12 +6,17 @@
     color: #fff;
 }
 
+html {
+    width: 100vw;
+}
+
 body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+    width: 100vw;
 }
 
 .header {
@@ -81,3 +86,24 @@ body {
     
 }
 
+@media only screen and (max-width: 600px) {
+    .buttons button {
+        padding: 5px 20px;
+        margin: 0px 10px;
+        width: 80px;
+        font-size: 10px;
+    }
+
+    .header h1 {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+    .header p {
+        font-size: 12px;
+    }
+
+    .score {
+        padding: 20px 0;
+    }
+}
