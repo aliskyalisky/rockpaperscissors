@@ -8,6 +8,8 @@
 }
 
 html {
+    overflow: hidden;
+    height: 100%;
     max-width: 100vw;
     margin: 0;
     padding: 0;
@@ -25,6 +27,7 @@ body {
     z-index: -2;
     margin: 0;
     padding: 0;
+    overflow: auto;
 }
 
 #myVideo {
@@ -168,8 +171,12 @@ div.flash {
        margin: 0 auto;
     }
 
+    .buttons {
+        gap: 10px;
+    }
+
     .header h1 {
-        font-size: 29px;
+        font-size: 25px;
         margin-top: 20px;
     }
 
@@ -179,5 +186,10 @@ div.flash {
 
     .score {
         padding: 20px 0;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
     }
 }
