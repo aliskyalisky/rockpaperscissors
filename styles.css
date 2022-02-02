@@ -171,8 +171,14 @@ div.flash {
        margin: 0 auto;
     }
 
+    body {
+        justify-content: center;
+    }
+
     .buttons {
         gap: 10px;
+        margin-bottom: 20px;
+     
     }
 
     .header h1 {
@@ -185,11 +191,12 @@ div.flash {
     }
 
     .score {
-        padding: 20px 0;
+        padding: 10px 0;
     }
 
     img {
         width: 80px;
         height: 80px;
     }
+
 }
