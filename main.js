@@ -7,10 +7,11 @@ const btn = document.querySelectorAll('#btn');
 const scoreDisplayYou = document.querySelector('.scoredisplayyou');
 const scoreDisplayBot = document.querySelector('.scoredisplaybot');
 const alertBox = document.querySelector('.alertbox');
+const emotion = document.querySelector('.emotion');
 
 scoreDisplayYou.textContent = '0';
 scoreDisplayBot.textContent = '0';
-
+emotion.textContent = ''
 
 for (let i = 0 ; i < btn.length; i++) {
     btn[i].addEventListener('click', () => {
@@ -46,15 +47,19 @@ function playRound (playerSelection, botSelection) {
 
     botSelection = botPlay()
     alertBox.textContent = ''
+    emotion.textContent = ''
 
         if (playerSelection == 'rock' && botSelection == 'scissors' || playerSelection == 'paper' && botSelection == 'rock' || playerSelection == 'scissors' && botSelection == 'paper') {
             playerScore = ++playerScore;
             alertBox.textContent = `You win! ${playerSelection} beats ${botSelection}.`;
+            emotion.textContent = ':)';
         } else if (playerSelection == 'rock' && botSelection == 'paper' || playerSelection == 'paper' && botSelection == 'scissors' || playerSelection == 'scissors' && botSelection == 'rock') {
             botScore = ++botScore;
             alertBox.textContent = `You lose! ${botSelection} beats ${playerSelection}.`;
+            emotion.textContent = ':(';
         } else {
             alertBox.textContent = `It\'s a tie! You both chose ${playerSelection}.`;
+            emotion.textContent = ':|';
         }
 
         scoreDisplayYou.textContent = `${playerScore}`

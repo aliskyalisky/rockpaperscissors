@@ -1,3 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200;300;600;800&display=swap');
+
+* {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background: #2b2927;
+    color: #fff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    
+}
+
+.header p {
+    margin-bottom: 50px;
+    margin-top: 0;
+    letter-spacing: 2px;
+    color: #ffc47d;
+
+}
+
+.header h1 {
+    margin-bottom: 0;
+}
+
 .score {
     display: flex;
 }
@@ -7,3 +40,44 @@
     padding: 10px 30px;
     text-align: center;
 }
+
+.scoredisplayyou,
+.scoredisplaybot {
+   color: #ffc47d;
+}
+
+.buttons {
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons button {
+    padding: 5px 20px;
+    margin: 0px 20px;
+    width: 100px;
+    border: 1px solid #ffc47d;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.alertbox {
+    padding: 20px;
+    margin-bottom: 0;
+}
+
+.textcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emotion {
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 10px;
+    transform: rotate(90deg);
+    color: #ffc47d
+    
+}
+
