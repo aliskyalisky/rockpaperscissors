@@ -26,10 +26,20 @@ for (let i = 0 ; i < btn.length; i++) {
         }
 
         playRound (playerSelection, botSelection)
+
+        if (video.playing) {
+
+        } else {
+            video.play();
+        }
     });
 }
 
+
 function videoPlayer () {
+
+   
+
     if (playerScore == 5) {
         video.classList.add("victory");
     } 
