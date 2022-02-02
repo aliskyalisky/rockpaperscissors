@@ -8,10 +8,12 @@ const scoreDisplayYou = document.querySelector('.scoredisplayyou');
 const scoreDisplayBot = document.querySelector('.scoredisplaybot');
 const alertBox = document.querySelector('.alertbox');
 const emotion = document.querySelector('.emotion');
+const video = document.querySelector('video');
 
 scoreDisplayYou.textContent = '0';
 scoreDisplayBot.textContent = '0';
-emotion.textContent = ''
+emotion.textContent = ':';
+alertBox.textContent = 'Choose one to start!';
 
 for (let i = 0 ; i < btn.length; i++) {
     btn[i].addEventListener('click', () => {
@@ -25,6 +27,15 @@ for (let i = 0 ; i < btn.length; i++) {
 
         playRound (playerSelection, botSelection)
     });
+}
+
+function videoPlayer () {
+    if (playerScore == 5) {
+        video.classList.add("victory");
+    } 
+    if (playerScore != 5) {
+        video.classList.remove("victory");
+    }
 }
 
 
@@ -72,6 +83,8 @@ function playRound (playerSelection, botSelection) {
          if (botScore == 5) {
             alertBox.textContent = 'You lost. Choose any option to try again.'
         } 
+
+        videoPlayer();
     
     }
 
